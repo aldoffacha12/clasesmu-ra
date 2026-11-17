@@ -91,15 +91,19 @@ export default function App() {
           >
             <a-cylinder
               color="#7c3aed"
-              radius="0.8"
-              height="0.05"
+              radius="0.45"
+              height="0.03"
               position="0 0 0"
             />
 
             {personaje ? (
               <a-gltf-model src="/DragonAttenuation.glb" scale={escala(0.5)} />
             ) : (
-              <a-box position="0 0.5 0" color="#a855f7" />
+              <a-box
+                position="0 0.5 0"
+                scale={escala(0.5)}
+                color="#a855f7"
+              />
             )}
           </a-entity>
         </a-marker>
