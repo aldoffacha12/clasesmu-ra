@@ -1,0 +1,106 @@
+:root {
+  --morado: #7c3aed;
+  --morado-claro: #a855f7;
+  --morado-oscuro: #2e1065;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+}
+
+.panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  width: max-content;
+  max-width: calc(100% - 24px);
+  margin: 12px;
+  padding: 14px 16px;
+
+  color: #faf5ff;
+  background: linear-gradient(135deg, var(--morado-oscuro), #4c1d95);
+  border: 1px solid var(--morado-claro);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgb(46 16 101 / 35%);
+}
+
+.panel__cabecera h1 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+}
+
+.panel__cabecera p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: #d8b4fe;
+}
+
+.panel__controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.panel button {
+  padding: 7px 11px;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  background: var(--morado);
+  border: 1px solid var(--morado-claro);
+  border-radius: 7px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.panel button:hover {
+  background: var(--morado-claro);
+  transform: translateY(-1px);
+}
+
+.panel button:active {
+  transform: translateY(0);
+}
+
+.panel__dato,
+.panel__estado {
+  padding: 6px 9px;
+  font-size: 13px;
+  background: rgb(255 255 255 / 10%);
+  border-radius: 7px;
+}
+
+.panel__estado.activo {
+  color: #dcfce7;
+  background: rgb(22 163 74 / 35%);
+}
+
+.panel__pista {
+  margin: 0;
+  font-size: 11px;
+  color: #e9d5ff;
+}
+
+.panel__pista strong {
+  color: white;
+}
+
+a-scene {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
